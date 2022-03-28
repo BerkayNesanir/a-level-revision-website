@@ -1,0 +1,199 @@
+/* CSS Selectors organisation
+   - Universal and root
+   - Element
+   - Class
+   - Header
+   - Main */
+
+/* CSS Properties organisation
+   - Variables
+   - Display
+   - Posititon
+   - Box-model
+   - Typography
+   - Manipulation
+   - Miscellaneous */
+
+/* Universal and root */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+   --blackHeading: #1f1f1f;
+   --blackSubHeading: #313131;
+   --blackText: #404040;
+   --greyBorder: #b0b0b0;
+   --greyBackground: #eeeeee;
+   --greyHover: #e4e4e4;
+   --whiteBackground: #f5f5f5;
+   --josefinSans: 'Josefin Sans', sans-serif;
+   --raleway: 'Raleway', sans-serif;
+}
+
+/* Element */
+
+a {
+   text-decoration: none;
+}
+
+body {
+   background-color: var(--whiteBackground);
+}
+
+li {
+  margin-left: 40px;
+}
+
+/* Class */
+
+.container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   min-width: 320px;
+   max-width: 2560px;
+   width: 85%;
+   margin: 0 auto;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+/* Header */
+
+.header-information {
+  background-color: var(--greyBackground);
+}
+
+.nav-links {
+  margin: 32px 0 16px 0;
+}
+
+.nav-title {
+  --FontSize: 36px;
+  font-family: var(--josefinSans);
+  font-size: var(--FontSize);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.nav-title > a {
+  color: var(--blackHeading);
+}
+
+.page-information {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-information-summary {
+  margin: 16px 0;
+}
+
+.page-information-subtitle {
+  --FontSize: 28px;
+  margin: 0 0 12px 0;
+  font-family: var(--josefinSans);
+  font-size: var(--FontSize);
+  font-weight: 600;
+  color: var(--blackSubHeading);
+}
+
+.page-information-description, .page-information-detail, .page-information-detail-list {
+  --FontSize: 16px;
+  font-family: var(--raleway);
+  font-size: var(--FontSize);
+  font-weight: 400;
+  line-height: 165%;
+  color: var(--blackText);
+}
+
+.page-information-details {
+  margin: 16px 0 32px 0;
+}
+
+@media screen and (min-width: 900px) {
+  .page-information {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-information-summary {
+    width: 45%;
+  }
+}
+
+/* Main */
+
+.breadcrumb {
+  margin: 32px 0 0 0;
+}
+
+.breadcrumb > * {
+  --FontSize: 13px;
+  font-family: var(--raleway);
+  font-size: var(--FontSize);
+  font-weight: 600;
+  color: var(--blackSubHeading);
+}
+
+.subject {
+  --FontSize: 28px;
+  margin: 48px 0 16px 0;
+  font-family: var(--josefinSans);
+  font-size: var(--FontSize);
+  font-weight: 600;
+  color: var(--blackSubHeading);
+}
+
+.applied > .topic:last-child {
+  margin: 0 0 32px 0;
+}
+
+.topic-card {
+  padding: 16px 0;
+  border-bottom: solid 1px var(--greyBorder);
+  cursor: pointer;
+  list-style: none;
+  transition: background-color 0.18s;
+}
+
+.topic-card:hover {
+  background-color: var(--greyHover);
+}
+
+.topic-title {
+  --FontSize: 20px;
+  font-family: var(--raleway);
+  font-size: var(--FontSize);
+  font-weight: 500;
+  color: var(--blackSubHeading);
+}
+
+.topic-area {
+  margin: 0 0 0 16px;
+}
+
+.topic-area-card {
+  padding: 16px 0;
+  cursor: pointer;
+  list-style: none;
+  transition: background-color 0.18s;
+}
+
+.topic-area-card:hover {
+  background-color: var(--greyHover);
+}
+
+.topic-area-title {
+  --FontSize: 18px;
+  font-family: var(--raleway);
+  font-size: var(--FontSize);
+  font-weight: 400;
+  color: var(--blackText);
+}
