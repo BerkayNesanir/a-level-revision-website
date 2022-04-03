@@ -92,7 +92,7 @@ li {
 }
 
 .page-information-summary {
-  margin: 16px 0 32px 0;
+  margin: 16px 0;
 }
 
 .page-information-subtitle {
@@ -125,6 +125,7 @@ li {
 
   .page-information-summary {
     width: 45%;
+    margin: 16px 0 32px 0;
   }
 }
 
